@@ -1,5 +1,20 @@
 .ContentCardBody {
-  background-color: black;
+  background-color: #ffffff;
   height: 500px;
-  width: 300px;
+  margin-top: 97px;
+  margin-left: 180px;
+  margin-right: 641.5px;
+  color: #333333;
+  border-radius: 10px;
+  padding-top: 12px;
+  padding-left: 30px;
 }
+.header{
+  padding-top:10px;
+  padding-bottom:5px;
+}
+
+.CardBody{
+  align-content: center;
+}
+

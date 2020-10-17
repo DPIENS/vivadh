@@ -3,21 +3,21 @@ import classes from "./NavBar.css";
 import { makeStyles } from "@material-ui/core/styles";
 import Avatar from "@material-ui/core/Avatar";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    "& > *": {
-      margin: theme.spacing(1),
-    },
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   root: {
+//     display: "flex",
+//     "& > *": {
+//       margin: theme.spacing(1),
+//     },
+//   },
+// }));
 
 const NavBar = () => {
-  const classes = useStyles();
+  // const classes = useStyles();
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand" id="vivadh" href="#">
+        <a className={`navbar-brand ${classes.vivadh}`}  href="#">
           Vivadh
         </a>
         <button
@@ -38,8 +38,8 @@ const NavBar = () => {
         >
           <form className="form-inline my-2 my-lg-0">
             <input
-              className="form-control mr-sm-2"
-              id="form-rounded"
+              className={`form-control mr-sm-2 ${classes.formRounded}`}
+              
               type="search"
               placeholder="Search"
               aria-label="Search"

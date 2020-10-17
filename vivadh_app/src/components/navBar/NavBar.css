@@ -1,19 +1,20 @@
-#vivadh{
-  color: #0275D8 ;
+.vivadh {
+  color: #0275d8 !important;
+
   font: normal normal bold 37px/44px;
   padding-left: 139px;
-
 }
-#form-rounded {
-    border-radius: 5rem!important;
-  }
+.formRounded {
+  border-radius: 5rem !important;
+}
 
-
-@media(max-width:600px){
-  #vivadh{
+@media (max-width: 600px) {
+  .vivadh {
     padding-left: 20px;
   }
 }
-.bellIcon{
-    padding-left: 8px;
+.bellIcon {
+  padding-left: 10px;
+  padding-right: 10px;
 }
+

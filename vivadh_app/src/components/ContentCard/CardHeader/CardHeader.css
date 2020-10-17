@@ -1,0 +1,50 @@
+.CardHeader {
+  display: flex;
+
+}
+
+.UserName {
+  color: rgb(40, 148, 236);
+  margin-left: 15px;
+  margin-top: 8px;
+  font-weight: bold;
+  font-family: "Roboto";
+  font-size: 12px;
+  text-align: left;
+}
+
+.PostedAnOpinion {
+  color: rgb(183, 187, 189);
+  font-size: 12px;
+  margin-left: 15px;
+  margin-top: 8px;
+}
+
+.PostedAgo {
+  color: rgb(183, 187, 189);
+  font-size: 12px;
+  margin-left: 15px;
+  margin-top: 8px;
+}
+
+.StarBorderIcon {
+  font-size: x-small;
+  color: rgb(221, 224, 226);
+  margin-right: 10px;
+  margin-left: 100px;
+  margin-top: 5px;
+}
+
+.StarIcon {
+  font-size: x-small;
+  color: rgb(245, 241, 6);
+  margin-right: 10px;
+  margin-left: 100px;
+  margin-top: 5px;
+}
+
+.MoreHorizon {
+    font-size: x-small;
+    color: rgb(221, 224, 226);
+    margin-top: 3px;
+}
