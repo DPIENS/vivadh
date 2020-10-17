@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "../components/navBar/NavBar";
+import NavBar from "../components/NavBar/NavBar";
 import Aux from "../hoc/Auxiliary";
 
 const appBuilder = () => {
