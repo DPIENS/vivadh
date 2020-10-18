@@ -1,44 +1,68 @@
 import React, { useState, useEffect } from "react";
 import classes from "./CardBody.css";
 
-const CardBody = () => {
+const CardBody = (props) => {
 
   // const linkName = readMore ? "Read Less <<" : "Read More >>";
-  const [para,setPara] = useState("")
-  const [shortpara, setShortpara] = useState("")
-  const [more,setMore] = useState("...more")
-  const [moretrue,setMoretrue] = useState(0)
-  const [initialPara, setInitialPara] = useState("");
-  var color = "" 
+  const [more,setMore] = useState("(more)")
+  const [moretrue,setMoretrue] = useState(true)
+
+  /// --->> write an async function to useState fetch from db !important
+  ///const [initialPara, setInitialPara] = useState();
   
-  useEffect(() => {
-    setInitialPara(`Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book.`)
-    setPara("It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.");
-    setShortpara(para.slice(0, 20));
+
+
+  const fullPara = () => {
     
-  }, [])
+    if(moretrue===0){
+     
+      if(props.mypara.length>250){
+        
+        return(props.mypara.slice(0,250)+"..")
 
-  const handlechange = () => {
-    if(moretrue === 0){
-       color = more
-      
-       setMore(" " + para + " ...less");
-       setMoretrue(1)
-
+      }
+      else{
+        return (props.mypara)
+      }
+        
     }
-    else{
-      setMore("...(more)")
-      setMoretrue(0)
 
-    }
+    
+  }
+    
+  //  useEffect(
+  //       //// write a async functon here!!!
+  //  )
+
+
+  const handlechange = (e) => {
+      e.preventDefault()
+       setMoretrue(!moretrue)
+       if(moretrue){
+         setMore("(less)")
+       }
+       else{
+         setMore("(more)")
+       }
+
    
   }
   return (
     <div className={classes.more}>
-      <h6 onClick={handlechange}>{` ${initialPara} ${more}`}</h6>
+      {
+
+        props.mypara.length>250?(<div>
+                  <h6>{moretrue?props.mypara.slice(0,250)+"...":props.mypara+"..."}<a href="" onClick={(e)=>handlechange(e)} >{more}</a></h6>
+
+        </div>):(
+          <div>
+            <h6>{props.mypara}</h6>
+          </div>
+        )
+
+
+      }
+      
     </div>
   );
 };
