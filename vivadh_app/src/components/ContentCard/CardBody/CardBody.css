@@ -1,7 +1,21 @@
 .CardBody {
+  margin-right: 15px;
+  text-align: left;
+  /* border: 1px solid black; */
+}
 
-    margin-right: 15px;
-    text-align: left;
-    /* border: 1px solid black; */
- 
+.readMoreLink {
+  color: blueviolet;
+  text-decoration: underline;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.extraContent {
+  color: cornflowerblue;
+  font-weight: 500;
+}
+.more{
+  display: flex;
+
 }
